@@ -1,0 +1,2 @@
+module SocialcampaignsHelper
+end

@@ -1,0 +1,38 @@
+<div class="container">
+<h1>schedule</h1>
+<%= render 'form'%>
+<hr>
+<table class="table table-striped">
+    <thead>
+     <tr>
+    <th>Sunday</th><br>
+    <th>Monday</th><br>
+    <th>Tuesday</th><br>
+    <th>Wednesday</th><br>
+    <th>Thuesday</th><br>
+    <th>Friday</th><br>
+    <th>Saturday</th><br>
+  </tr>
+    </thead>
+    <tbody>
+    	<% @schedules.each do |ps| %>
+    	
+      <tr>
+      <td><%= ps.sunday %></td>
+      <td><%= ps.Monday %></td>
+      <td><%= ps.Tuesday %></td>
+      <td><%= ps.Wednesday  %></td>
+      <td><%= ps.Friday  %></td>
+      <td><%= ps.Saturday  %></td>
+       
+      </tr>
+      <%end%>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+

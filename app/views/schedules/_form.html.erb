@@ -1,0 +1,58 @@
+<div class="container">
+<%=form_for @schedule do |f| %>
+ <% if @schedule.errors.any? %>
+	  <div id="error_explanation">
+	    <h2><%= pluralize(@schedule.errors.count, "error") %> prohibited
+	      this schedule from being saved:</h2>
+	    <ul>
+	    <% @schedule.errors.full_messages.each do |msg| %>
+	      <li><%= msg %></li>
+	    <% end %>
+	    </ul>
+	  </div>
+    <% end %>
+ 
+
+  
+ 
+    <p>
+      <%= f.label :Timezone %><br>
+      <%= f.text_field :timezone ,class: "form-control" ,placeholder: "type a city .." %>
+    </p>
+    <p>
+    <%= f.label :date %><br>
+    <%= f.date_field :datetime,class: "form-control" %>
+    </p>
+    
+
+
+    <p>
+
+    <%= f.label :time %><br>
+    <%= f.time_field :time,class: "form-control" %>
+    </p>
+    
+    
+
+
+    <select>
+      <option>Every Day</option>
+      <option>Weekdays<%:Weekdays%></option>
+      <option>Weekends<%:Weekends%></option>
+     <option>Sunday<%:sunday%></option>
+     <option>Monday<%:Monday%></option>
+     <option>Tuesday<%:Tuesday%></option>
+     <option>Wednesday<%:Wednesday%></option>
+     <option>Thuesday<%:Thuesday%></option>
+     <option>Friday<%:Friday%></option>
+     <option>Saturday<%:Saturday%></option>
+    </select>
+    <br>
+    <span><p>
+    <%= f.submit "Postingtime" ,class: "btn btn-primary"%>
+   </p></span>
+<% end %>
+
+
+</div>
+

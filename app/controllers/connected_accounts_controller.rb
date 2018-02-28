@@ -1,0 +1,2 @@
+class ConnectedAccountsController < ApplicationController
+end

@@ -1,0 +1,54 @@
+	<div class="col-sm-3">
+	 <h4>Accounts</h4>
+	</div>
+		 <div class="container">
+
+			 <dvi class="col-sm-12">
+			 	<%=render 'form' %>
+			    <h1>Timeline</h1>
+                  
+				  <% @socials.each do |social|%>
+					   <div class="well">
+							  	<div class="row" style="float: right;">
+		                                <%= link_to socialcampaign_path(social) do %>
+										    <i class="glyphicon glyphicon-picture"></i>
+										<% end %>
+							  
+
+		                                <%= link_to edit_socialcampaign_path(social) do %>
+										    <i class="glyphicon glyphicon-pencil"></i>
+										<% end %>
+
+
+								         <%= link_to socialcampaign_path(social),method: :delete,
+									              data: { confirm: 'Are you sure?' } do %>
+									       <i class="glyphicon glyphicon-trash"></i>
+									        <%end%>
+			                    </div>
+				                      <div class="row">
+				                          <div id='image'>
+				                          	<%= image_tag social.image_url%><br>
+									        <%= time_ago_in_words(social.created_at) %> Ago
+									      </div>
+						               </div> 
+						              
+						                <%= link_to like_socialcampaign_path(social), method: :put do %>
+										 <i class="glyphicon glyphicon-thumbs-up"></i>
+										<%=social.get_likes.size%>
+										<% end %>
+
+										 <%= link_to  dislike_socialcampaign_path(social), method: :put do %>
+										 <i class="glyphicon glyphicon-thumbs-down"></i>
+										 <%=social.get_dislikes.size%>
+										 <% end %>
+										
+						              
+						              <% t = social.created_at%><br>
+					                  <%=t+Time.zone_offset('EST')%>
+	                      </div>
+				  <%end%>
+				 
+			  </div>
+			</div>
+		</div>
+

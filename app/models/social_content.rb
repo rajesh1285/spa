@@ -1,0 +1,2 @@
+class SocialContent < ApplicationRecord
+end

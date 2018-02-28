@@ -1,0 +1,2 @@
+class LeadAd < ApplicationRecord
+end
