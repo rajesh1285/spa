@@ -5,6 +5,15 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem "koala"
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-linkedin'
+gem 'linkedin', '~> 1.1'
+gem 'omniauth-twitter', :github => 'arunagw/omniauth-twitter'
+
+
+
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'bootstrap-sass', '~> 3.3.7' #stable version
 gem 'carrierwave', '~> 1.0'

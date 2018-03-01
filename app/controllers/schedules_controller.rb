@@ -38,7 +38,7 @@ class SchedulesController < ApplicationController
 	 end
 	 def destroy
 	 	@schedule.destroy
-	 	redirect_to root_path  #posts_path
+	 	redirect_to schedules_path  #posts_path
 
 	 end
 
@@ -47,7 +47,7 @@ class SchedulesController < ApplicationController
 
 	 private
 	  def schedule_params
-	   params.require(:schedule).permit(:timezone,:datetime)
+	   params.require(:schedule).permit(:timezone,:datetime,:time, :sunday,:Monday,:Tuesday,:Wednesday,:Thuesday,:Friday,:Saturday)
 	  end
 	 
 

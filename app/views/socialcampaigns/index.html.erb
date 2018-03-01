@@ -1,8 +1,13 @@
-	<div class="col-sm-3">
-	 <h4>Accounts</h4>
+	<div class="col-sm-2" id = "sm">
+		
+	 <button class="btn btn-default">Add-Accounts+</button><br><br>
+	 <button class="btn btn-primary" id="fb"><%= link_to "FacebookLogin", user_facebook_omniauth_authorize_path%></button><br><br>
+	  <button class="btn btn-primary" id="fb"><%= link_to "LinkedinLogin", user_linkedin_omniauth_authorize_path%></button><br><br>
+	 <button class="btn btn-primary" id="fb"><%= link_to "TwitterLogin", user_twitter_omniauth_authorize_path%></button><br><br>
+	
 	</div>
 		 <div class="container">
-
+           <div class="well">
 			 <dvi class="col-sm-12">
 			 	<%=render 'form' %>
 			    <h1>Timeline</h1>
@@ -49,6 +54,7 @@
 				  <%end%>
 				 
 			  </div>
+			</dvi>
 			</div>
 		</div>
 

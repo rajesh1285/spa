@@ -11,41 +11,33 @@
 	    </ul>
 	  </div>
     <% end %>
- 
 
-  
- 
     <p>
       <%= f.label :Timezone %><br>
       <%= f.text_field :timezone ,class: "form-control" ,placeholder: "type a city .." %>
     </p>
     <p>
     <%= f.label :date %><br>
-    <%= f.date_field :datetime,class: "form-control" %>
+    <%= f.date_field :date,class: "form-control" %>
     </p>
-    
-
 
     <p>
 
     <%= f.label :time %><br>
-    <%= f.time_field :time,class: "form-control" %>
+    <%= f.time_field :posting_time,class: "form-control" %>
     </p>
-    
-    
-
 
     <select>
       <option>Every Day</option>
-      <option>Weekdays<%:Weekdays%></option>
-      <option>Weekends<%:Weekends%></option>
-     <option>Sunday<%:sunday%></option>
-     <option>Monday<%:Monday%></option>
-     <option>Tuesday<%:Tuesday%></option>
-     <option>Wednesday<%:Wednesday%></option>
-     <option>Thuesday<%:Thuesday%></option>
-     <option>Friday<%:Friday%></option>
-     <option>Saturday<%:Saturday%></option>
+     <option>Weekdays </option>
+     <option>Weekends</option>
+     <option> Sunday </option>
+     <option> Monday </option>
+     <option> Tuesday </option>
+     <option> Wednesday </option>
+     <option> Thuesday </option>
+     <option> Friday </option>
+     <option> Saturday </option>
     </select>
     <br>
     <span><p>

@@ -5,26 +5,29 @@
 <table class="table table-striped">
     <thead>
      <tr>
-    <th>Sunday</th><br>
-    <th>Monday</th><br>
-    <th>Tuesday</th><br>
-    <th>Wednesday</th><br>
-    <th>Thuesday</th><br>
-    <th>Friday</th><br>
-    <th>Saturday</th><br>
+    <th>Sunday</th>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+    <th>Thuesday</th>
+    <th>Friday</th>
+    <th>Saturday</th>
+    <th>remove</th>
   </tr>
     </thead>
     <tbody>
     	<% @schedules.each do |ps| %>
-    	
       <tr>
       <td><%= ps.sunday %></td>
       <td><%= ps.Monday %></td>
       <td><%= ps.Tuesday %></td>
       <td><%= ps.Wednesday  %></td>
+      <td><%= ps.Thuesday%></td>
       <td><%= ps.Friday  %></td>
       <td><%= ps.Saturday  %></td>
-       
+       <td><%= link_to 'remove', schedule_path(ps),
+              method: :delete,
+              data: { confirm: 'Are you sure?' }%></td>
       </tr>
       <%end%>
     </tbody>
